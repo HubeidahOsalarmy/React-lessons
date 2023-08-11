@@ -4,14 +4,30 @@ import React from "react"
  //   return <h1>Hello Idris</h1>
 //}
 
-const Greet = (props) => {
-  console.log(props)
+// destructuring of props in the parameter
+/*const Greet = ({heroName, name}) => {
+  
   return (
     <div>
       <h1>
-        Hello {props.heroName} a.k.a {props.name}
+        Hello {heroName} a.k.a {name}
       </h1>
-     {props.children}
+     
+    </div>
+    
+  )
+  
+}*/
+
+// destructuring of props in the function body
+const Greet = (props) => {
+  const {heroName, name} = props
+  return (
+    <div>
+      <h1>
+        Hello {heroName} a.k.a {name}
+      </h1>
+     
     </div>
     
   )
